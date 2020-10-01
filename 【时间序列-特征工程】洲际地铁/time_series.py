@@ -17,6 +17,7 @@ from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn import metrics, ensemble
 from lightgbm import LGBMRegressor
 from xgboost import XGBRegressor
+import seaborn as sns
 
 
 def read_data():
@@ -50,8 +51,12 @@ def characteristics_the_engineer(df):
             4. clouds_all
         - 新增：
             1. months：月份
-            2.
+            2. day_of_month：日
+            3. hours：时间
+            4. weekday:是否工作日
         - 仅OneHot：
+            1. is_holiday:是否节假日
+            2. weathers：简要天气描述
     :param df:
     :return:
     '''
